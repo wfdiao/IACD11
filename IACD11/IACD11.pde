@@ -46,9 +46,9 @@ void draw() {
 //===================================================
 void renderMyDesign (float percent) {
  background(255);
- strokeWeight(2);
+ strokeWeight(1);
  smooth();
- for(int i=0; i<= 35; i+=5)
+ for(int i=0; i<= 200; i+=5)
  {
 drawCardioid(percent, i);
  }
@@ -70,9 +70,10 @@ float lastx=-999;
 float lasty=-999;
 for(float t=0; t <= 360; t+=1){
 float rad=radians(t);
-x=centerX+a*(2*cos(rad)-cos(2*rad));
-y=centerY+a*(2*sin(rad)-sin(2*rad));
-point(x,y);
+x=centerX+a*(2*cos(rad)-cos(3*rad));
+y=centerY+a*(2*sin(rad)-sin(3*rad));
+translate(x,y,0);
+box(x,y);
 
 }
 }
